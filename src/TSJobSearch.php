@@ -4,12 +4,12 @@ namespace TalentsConnect\GoogleJobSearch;
 
 class TSJobSearch
 {
-    public function fromArray($dataset): JobSearchConverter
+    public static function fromArray($dataset): JobSearchConverter
     {
         return (new JobSearchArrayCreator($dataset))->getJobSearch();
     }
 
-    public function fromCsv($dataset){
+    public static function fromCsv($dataset): JobSearchConverter{
         return (new JobSearchArrayCreator($dataset))->getJobSearch();
     }
 }

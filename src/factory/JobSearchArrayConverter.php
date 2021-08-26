@@ -13,10 +13,6 @@ class JobSearchArrayConverter implements JobSearchConverter, \JsonSerializable
         $this->dataset = $dataset;
     }
 
-    public function setDataset($dataset){
-        $this->dataset = $dataset;
-    }
-
     public function convert()
     {
         try {

@@ -10,17 +10,13 @@ class JobSearchCsvConverter implements JobSearchConverter, \JsonSerializable
 
     public function __construct($dataset)
     {
-        $this->dataset = $dataset;
-    }
-
-    public function setDataset($dataset){
-        $this->dataset = fgetcsv($dataset);
+        $this->dataset =fgetcsv($dataset);
     }
 
     public function convert()
     {
         try {
-            $resultData = new JsonValidation($this->dataset);
+            $resultData = (new JsonValidation($this->dataset))->validate();
 
             foreach ($resultData as $result){
                 $this->jobSearchResult[]= [

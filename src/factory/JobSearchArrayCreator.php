@@ -4,18 +4,18 @@ namespace TalentsConnect\GoogleJobSearch;
 
 class JobSearchArrayCreator extends JobSearchCreator
 {
-    private $content;
+    private $dataset;
 
     /**
      * @param $content
      */
-    public function __construct($content)
+    public function __construct($dataset)
     {
-        $this->content = $content;
+        $this->dataset = $dataset;
     }
 
     public function getJobSearch(): JobSearchConverter
     {
-        return new JobSearchArrayConverter($this->content);
+        return new JobSearchArrayConverter($this->dataset);
     }
 }
