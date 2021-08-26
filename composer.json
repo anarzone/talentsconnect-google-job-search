@@ -1,0 +1,19 @@
+{
+    "name": "talentsconnect/google-job-search",
+    "description": "A php package to convert dataset to valid json-ld format",
+    "type": "library",
+    "require-dev": {},
+    "license": "",
+    "authors": [
+        {
+            "name": "Anar Haqverdiyev",
+            "email": "haqverdiyevanar@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "TalentsConnect\\GoogleJobSearch\\": "src/"
+        }
+    }
+}
